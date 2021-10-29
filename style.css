@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  margin: 1rem 0 1.68rem;
+}
+
+.title-table {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+
+select#transactionCategory {
+  margin-bottom: 2rem;
+}
+
+.botonAnadir {
+  font-size: 23px;
+}
+
+th, td {
+  border: 1px solid red;
+  padding: 10px;
+  text-align: center;
+}
+
+.tableFormat table {
+  margin: 10px auto;
+}

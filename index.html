@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Mi economia</title>
+</head>
+
+<body>
+  <h1>Mi Aplicación para Gastos</h1>
+
+  <div class="row">
+
+    <div class="col l5 s12">
+      <div class="col s8 offset-s2">
+        <form id="transactionForm" action="">
+          <div class="formField">Tipo de transacción
+            <p>
+              <label for="ingreso">
+                <input class="with-gap" id="ingreso" name="transactionType" type="radio" value="Ingreso" checked />
+                <span>Ingreso</span>
+              </label>
+              <label>
+                <input class="with-gap" id="egreso" name="transactionType" type="radio" value="Egreso" />
+                <span>Egreso</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <input class="validate" id="transactionDescription" name="transactionDescription" type="text" required>
+            <label for="transactionDescription">Descripción</label>
+          </div>
+          <div class="input-field">
+            <input class="validate" id="transactionAmount" name="transactionAmount" type="number" required>
+            <label for="transactionAmount">Monto</label>
+          </div>
+          <div class="formField">
+            <label for="transactionCategory">Cargoría</label>
+            <select class="browser-default" id="transactionCategory" name="transactionCategory" type="text" required>
+              <option value="" disabled selected>Elige un Categoría</option>
+              <option value="Alquiler">Alquiler</option>
+              <option value="Comida">Comida</option>
+              <option value="Diversión">Diversión</option>
+              <option value="Salario">Salario</option>
+            </select>
+          </div>
+          <div class="formField">
+            <button class="btn waves-effect waves-light" id="botonAnadir" type="submit" name="action">Añadir
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col l5 offset-l1 s12">
+      <h6 class="title-table">Historial de Transacciones</h6>
+      <table id="transactionTable">
+        <tbody>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Monto</th>
+            <th>Categoría</th>
+            <th>Eliminar</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
